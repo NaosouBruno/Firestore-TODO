@@ -1,0 +1,125 @@
+.containerInput {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 50px;
+  /*  border: 1px solid #333; */
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 0;
+  transition: 1s;
+  &::before,
+  &::after {
+    position: absolute;
+    background: rgb(205, 136, 136);
+    z-index: -1;
+    transition: 1s;
+    content: "";
+  }
+  &::before {
+    background-color: transparent;
+    width: 350px;
+    height: 50px;
+  }
+  &::after {
+    width: 140px;
+    height: 25px;
+  }
+  &:hover::before {
+    width: 0px;
+    background: rgb(93, 11, 11);
+    /*   background: linear-gradient(45deg, #fbc490, #cd8d7b, #687466 #2c577f); */
+  }
+
+  &:hover::after {
+    height: 0px;
+    background: #fff;
+  }
+
+  &:hover {
+    border-radius: 15px;
+    background: linear-gradient(45deg, #2c577f, #687466, #cd8d7b, #fbc490);
+  }
+  &__addTask {
+    /*  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; */
+    user-select: none;
+    width: 250px;
+    height: 25px;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid;
+    padding-left: 10px;
+    font-size: 1.1rem;
+    font-family: "Catamaran", sans-serif;
+    box-shadow: 3px 2px 5px rgba($color: #9a3030, $alpha: 0.51);
+    &--error {
+      border: 1px solid red;
+    }
+    &:focus {
+      width: 270px;
+      height: 30px;
+    }
+
+    &::placeholder {
+      font-weight: 700;
+      color: #1391da;
+    }
+  }
+}
+.btn {
+  font-family: "Cinzel", serif;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  transition: 1s;
+  &::before,
+  &::after {
+    position: absolute;
+    background: #eee;
+    z-index: -1;
+    transition: 1s;
+    content: "";
+  }
+  &::before {
+    height: 50px;
+    width: 130px;
+  }
+  &::after {
+    width: 150px;
+    height: 30px;
+  }
+
+  &--noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  &:hover::before {
+    width: 0px;
+    background: #fff;
+  }
+
+  &:hover::after {
+    height: 0px;
+    background: #fff;
+  }
+
+  &:hover {
+    background: #fff;
+  }
+}

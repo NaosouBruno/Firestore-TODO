@@ -1,0 +1,17 @@
+.tasksContainer {
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  &--typografy {
+    font-size: 1.5rem;
+    font-family: "Catamaran", sans-serif;
+    font-weight: 700;
+  }
+  &--title {
+  }
+  &--teste {
+  }
+}
